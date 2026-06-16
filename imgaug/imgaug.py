@@ -702,13 +702,13 @@ def angle_between_vectors(v1, v2):
 
     Examples
     --------
-    >>> angle_between_vectors(np.float32([1, 0, 0]), np.float32([0, 1, 0]))
+    >>> angle_between_vectors(np.float32([1, 0, 0]), np.float32([0, 1, 0])).item()
     1.570796...
 
-    >>> angle_between_vectors(np.float32([1, 0, 0]), np.float32([1, 0, 0]))
+    >>> angle_between_vectors(np.float32([1, 0, 0]), np.float32([1, 0, 0])).item()
     0.0
 
-    >>> angle_between_vectors(np.float32([1, 0, 0]), np.float32([-1, 0, 0]))
+    >>> angle_between_vectors(np.float32([1, 0, 0]), np.float32([-1, 0, 0])).item()
     3.141592...
 
     """
@@ -1302,7 +1302,7 @@ def pool(arr, block_size, func, pad_mode="constant", pad_cval=0,
     input_dtype = arr.dtype
 
     arr_reduced = skimage.measure.block_reduce(arr, tuple(block_size), func,
-                                               cval=cval)
+                                               cval=pad_cval)
     if preserve_dtype and arr_reduced.dtype.name != input_dtype.name:
         arr_reduced = arr_reduced.astype(input_dtype)
     return arr_reduced

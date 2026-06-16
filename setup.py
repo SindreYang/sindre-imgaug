@@ -6,19 +6,29 @@ from setuptools import setup, find_packages
 
 INSTALL_REQUIRES = [
     "six",
-    "numpy>=2",
+    "numpy>=1.21",
     "scipy",
     "Pillow",
     "matplotlib",
-    "scikit-image>=0.14.2",
+    "scikit-image>=0.17",
     "opencv-python-headless",
+    "opencv-python",
     "imageio",
-    "Shapely"
+    "Shapely",
+    "imagecorruptions-imaug>=1.1.3",
 ]
 
 ALT_INSTALL_REQUIRES = {
     "opencv-python-headless": ["opencv-python", "opencv-contrib-python", "opencv-contrib-python-headless"],
 }
+
+DEV_REQUIRES = [
+    "pytest-subtests",
+    "xdoctest >= 0.7.2",
+    "coverage",
+    "pytest-cov",
+    "flake8",
+]
 
 
 def check_alternative_installation(install_require, alternative_install_requires):
