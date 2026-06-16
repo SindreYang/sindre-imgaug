@@ -15,7 +15,6 @@ INSTALL_REQUIRES = [
     "opencv-python",
     "imageio",
     "Shapely",
-    "imagecorruptions-imaug>=1.1.3",
 ]
 
 ALT_INSTALL_REQUIRES = {

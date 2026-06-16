@@ -3,10 +3,11 @@ requires = ["setuptools>=61.2.0", "wheel", "setuptools_scm[toml]>=3.4.3"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "imgaug"
-authors = [{name = "Alexander Jung", email = "kontakt@ajung.name"}]
+name = "sindre-imgaug"
+authors = [{name = "SindreYang"}]
 license = {text = "MIT"}
-description = "Image augmentation library for deep neural networks"
+description = "Image augmentation library for deep neural networks (fork)"
+requires-python = ">=3.8"
 keywords = [
     "augmentation",
     "image",
@@ -25,26 +26,25 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Natural Language :: English",
     "Operating System :: OS Independent",
-    "Programming Language :: Python :: 2.7",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.4",
-    "Programming Language :: Python :: 3.5",
-    "Programming Language :: Python :: 3.6",
-    "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
     "Topic :: Scientific/Engineering :: Image Recognition",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 dependencies = [
     "six",
-    "numpy>=1.15",
+    "numpy>=1.21",
     "scipy",
     "Pillow",
     "matplotlib",
-    "scikit-image>=0.14.2",
-    "imageio<=2.6.1; python_version<'3.5'",
-    "imageio; python_version>='3.5'",
+    "scikit-image>=0.17",
+    "opencv-python-headless",
+    "imageio",
     "Shapely",
 ]
 dynamic = ["version"]
@@ -58,8 +58,8 @@ file = "README.md"
 content-type = "text/markdown"
 
 [project.urls]
-Homepage = "https://github.com/aleju/imgaug"
-Download = "https://github.com/aleju/imgaug/archive/0.4.0.tar.gz"
+Homepage = "https://github.com/SindreYang/sindre-imgaug"
+Download = "https://github.com/SindreYang/sindre-imgaug/archive/v0.4.1.tar.gz"
 
 [tool.setuptools]
 include-package-data = true
