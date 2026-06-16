@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "sindre-imgaug"
-authors = [{name = "SindreYang"}]
+authors = [{name = "Alexander Jung", email = "kontakt@ajung.name"}]
 license = {text = "MIT"}
 description = "Image augmentation library for deep neural networks (fork)"
 requires-python = ">=3.8"
@@ -27,11 +27,6 @@ classifiers = [
     "Natural Language :: English",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
     "Topic :: Scientific/Engineering :: Image Recognition",
     "Topic :: Software Development :: Libraries :: Python Modules",
@@ -59,7 +54,7 @@ content-type = "text/markdown"
 
 [project.urls]
 Homepage = "https://github.com/SindreYang/sindre-imgaug"
-Download = "https://github.com/SindreYang/sindre-imgaug/archive/v0.4.1.tar.gz"
+Download = "https://github.com/SindreYang/sindre-imgaug/archive/v0.4.2.tar.gz"
 
 [tool.setuptools]
 include-package-data = true
@@ -79,5 +74,6 @@ imgaug = [
 
 
 [tool.setuptools_scm]
+version_scheme = "no-guess-dev"
 write_to = "imgaug/__version__.py"
 write_to_template = "__version__ = '{version}'\n"
