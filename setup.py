@@ -6,7 +6,7 @@ from setuptools import setup, find_packages
 
 INSTALL_REQUIRES = [
     "six",
-    "numpy>=1.15",
+    "numpy>=2",
     "scipy",
     "Pillow",
     "matplotlib",
